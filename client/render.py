@@ -13,6 +13,10 @@ class RenderedObject:
         self.height = kwargs.get('height', None)
         self.text = kwargs.get('text', None)
         self.color = kwargs.get('color', None)
+<<<<<<< HEAD:client/render.py
+=======
+        self.fill = kwargs.get('fill', None)
+>>>>>>> master:client/render.py
         self.font = kwargs.get('font', None)
         self.anchor = kwargs.get('anchor', None)
         self.zIndex = kwargs.get('zIndex', 1)

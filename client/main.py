@@ -53,10 +53,19 @@ def start_online_game(name, ip=SERVER_HOST, port=SERVER_PORT):
     connection = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     fen = tk.Tk()
+<<<<<<< HEAD
     fen.title(GAME_NAME + ' - Multi')
+=======
+    fen.title(GAME_NAME)
+>>>>>>> master
     width, height = fen.winfo_screenwidth(), fen.winfo_screenheight()
 
     canvas = tk.Canvas(fen, width=width, height=height, bg='#F1E7DC', highlightthickness=0)
+    fen.bind('<Key-g>', lambda *args: restart(fen))
+
+    def restart(fen):
+        fen.destroy()
+        start_game('PvE')
 
     env = Env(fen, width, height, canvas)
     map = Map(env, 'map1.txt', 'Test')
